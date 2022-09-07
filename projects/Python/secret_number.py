@@ -1,13 +1,13 @@
 import random
-numero_aleatorio=random.randint(1,10)
-print("Juego de adivinar número secreto")
-numero_usuario=0;
-while(numero_usuario!=numero_aleatorio):
-    numero_usuario=int(input("Ingrese un número: "))
-    if(numero_usuario>=0 and numero_usuario<=11):
-        if (numero_usuario==numero_aleatorio):
-            print(f"Bien hecho, el número secreto era {numero_aleatorio}")
+random_number=random.randint(1,10)
+print("Guess the secret number")
+user_number=0;
+while(user_number!=random_number):
+    user_number=int(input("Choose a number: "))
+    if(user_number>=0 and user_number<=11):
+        if (user_number==random_number):
+            print(f"Well done, the random number was {random_number}")
         else:
-            print(f"No, {numero_usuario} no es el número secreto ")
+            print(f"No, {user_number} wasn't the secret number ")
     else:
-        print(f"El número: {numero_usuario} debe ir entre 1 y 10")
+        print(f"Number: {user_number} must be between 1 and 10")
