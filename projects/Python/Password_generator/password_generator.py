@@ -1,4 +1,3 @@
-from platform import platform
 import random
 def write_txt(password):
     f = open('Passwords.txt','a')
