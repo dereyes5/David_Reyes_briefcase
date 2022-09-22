@@ -4,11 +4,17 @@ def write_txt(password):
     f.write('\n' + password)
     f.close()
 def generate_password(length,platform):
+    capital='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    lowercase='abcdefghijklmnopqrstuvwxyz'
+    numbers='1234567890'
+    specials='!#$%&*+/:;`^_'
     aux=[]
-    aux.append(chr(random.randint(65, 90)))
-    for i in range(length-2):
-        aux.append(chr(random.randint(97, 122)))
-    aux.append('.')
+    aux.append(capital[random.randint(0,len(capital)-1)])
+    for i in range(length-4):
+        aux.append(lowercase[random.randint(0,len(lowercase)-1)])
+    for j in range(2):
+        aux.append(numbers[random.randint(0,len(numbers)-1)])
+    aux.append(specials[random.randint(0,len(specials)-1)])
     password="".join(aux)
     final=f"{platform} : {password}"
     print(final)
