@@ -28,7 +28,7 @@ while(answer==0):
     print(f"Your choose is: {options[player-1]}")
     pc=random.randint(0,2);
     if(juego(player-1,pc)==1):
-        score+=1
+        score=score+1
         print(score)
     print(f"pc choose is: {options[pc]}")
     answer=int(input("still playing? - 1: no - 0: yes --> "))
